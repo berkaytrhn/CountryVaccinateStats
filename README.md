@@ -1,0 +1,2 @@
+# CountryVaccinateStats
+Technical Assesment Task
