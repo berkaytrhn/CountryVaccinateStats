@@ -9,7 +9,7 @@ def fillEmptyColumns(null_df,df):
     for country in null_df["country"]:
         relatedValue = minValuesGrouped.loc[minValuesGrouped["country"] == country]["daily_vaccinations"]
         print(relatedValue.values[0], "\n********")
-        #minimum değerleri elde ettik, asıl data framede yerine koymak kaldı
+        #have the minimum values, finally insert values to relevant columns of dataframe 
        
         
 
