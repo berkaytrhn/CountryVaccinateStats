@@ -35,9 +35,15 @@ def fillEmptyColumns(df):
         
 
 
-
+#read csv file and create dataFrame
 file = pd.read_csv("./country_vaccination_stats.csv",sep=",")
 dataFrame = pd.DataFrame(file)
 
 
+
+#call relevant function
 fillEmptyColumns(dataFrame)
+
+
+#writing imputed version of dataset
+dataFrame.to_csv("./imputed_country_vaccination_stats.csv")
