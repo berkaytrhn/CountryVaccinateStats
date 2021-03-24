@@ -3,12 +3,12 @@ WITH processed as(
         MAX(count) OVER (PARTITION BY country) as number_of_rows
     FROM
     (
-        WITH mything as(
+        WITH temptable as(
             SELECT country,date,vaccine_number,PERCENT_RANK() OVER (PARTITION BY country ORDER BY country asc,vaccine_number asc) as relative_rank
             FROM country_vaccination_stats
         )
         SELECT country,date,vaccine_number,relative_rank,ROW_Number() OVER (PARTITION BY country ORDER BY relative_rank) as count
-        FROM mything
+        FROM temptable
     )
 )SELECT country, avg(vaccine_number) as median_vaccination
 FROM processed
