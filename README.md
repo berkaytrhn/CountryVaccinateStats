@@ -22,5 +22,5 @@ Filling the missing data in "country_vaccination_stats.csv" for each country acc
 
 Created a database which contains "Device_Type" and "Stats_Access_Link" columns. Program extracts actual link information from Stats_Access_Link colmun and appends it to "hyperLink.db" as a new column named "purified_link" 
   Example : 
-    initial link :  <url>http://ABC5.xyz.com</url>
+    initial link :  \<url>http://ABC5.xyz.com\</url>
     purified link : ABC5.xyz.com
